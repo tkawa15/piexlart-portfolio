@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
   font-family: 'PixelFont';
-  src: url(/fonts/PixelMplus12-Regular.ttf);
+  src: url(./fonts/PixelMplus12-Regular.ttf);
 }
 html {
   margin: 0; padding: 0;
