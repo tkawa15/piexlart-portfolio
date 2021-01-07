@@ -1,0 +1,110 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'PixelFont';
+  src: url(/fonts/PixelMplus12-Regular.ttf);
+}
+html {
+  margin: 0; padding: 0;
+}
+body{
+  margin: 0; padding: 0;
+  text-align: center;
+  font-family: PixelFont;
+  background-color: #402211;
+  color: #FEFEFE;
+}
+.edge-back{
+  position: fixed;
+  width: 4vw;
+  height: 4vw;
+}
+#main {
+  margin: 0 auto;
+  width: 64vw;
+}
+.dot{
+  image-rendering: pixelated;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+.frame {
+  border-top: solid 1.6vw #00B000;
+  border-left: solid 1.6vw #008000;
+  border-bottom: solid 1.6vw #007000;
+  border-right: solid 1.6vw #00A000;
+  background-color: #FEFEFE;
+}
+
+#dots {
+   line-height: 0;
+   -webkit-column-count: 3;
+   -webkit-column-gap:  4.8vw;
+   -moz-column-count:    3;
+   -moz-column-gap:      4.8vw;
+   column-count:         3;
+   column-gap:            4.8vw;
+}
+#dots img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+  transform: scale(1);
+  transition: transform .4s;
+  z-index: 100;
+  margin-top: 1.6vw;
+}
+#dots img:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px){
+  #main{ width: 90vw; }
+}
+	@media screen and (max-width: 480px){
+    #dots {
+      -moz-column-count:    2;
+      -webkit-column-count: 2;
+      column-count:         2;
+    }
+  }
+
+#popup{
+  z-index: 1000;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.detail{
+  background-color: #FEFEFE;
+  color: black;
+  position: fixed;
+  padding: 4vh 4vw;
+  top: 4vh; left: 4vw; right: 4vw; bottom: 4vh;
+  overflow: scroll;
+}
+.detail img{
+  width: 50%;
+}
+.detail h2 span{
+  display: inline-block;
+  border-bottom: 2px #402211 solid;
+}
+
+.footer{
+  border-top: 2px #FEFEFE solid;
+  margin-top: 3.2vw;
+}
+
+a{
+  color: #FFEB4F;
+  transition: transform .4s;
+}
+a :hover{
+  transition: transform .4s;
+  transform: scale(1.2);
+}
+a:visited {
+  color: #E6943A;
+}
